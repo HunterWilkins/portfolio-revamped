@@ -1,0 +1,140 @@
+:root {
+    --padding: 5px;
+    --footerHeight: 30px;
+    --navHeight: 40px;
+    --asideWidth: 90px;
+    --text-color: rgb(230,230,230);
+    
+    --background: rgb(51, 30, 21);
+    --alt-background: #00212b;
+    --background-half: #11504d;
+    --alt-background-half: #3c2b32;
+    --nav-color: #a5384a;
+    --highlight-color: #e0425d;
+    --highlight-brighter: rgb(255, 219, 118);
+    --alt-color: #ea3d5b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+em {
+    font-style: italic;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+strong {
+    font-weight: bolder;
+}
+
+ul {
+    list-style-type: circle;
+    list-style-position:inside;
+}
+
+/*PAGE - SPECIFIC*/
+body {
+    position: relative;
+    font-family: 'Cabin', sans-serif;
+    font-family: sans-serif;
+    /* background: linear-gradient(to right, var(--background), var(--alt-background)); */
+    background: var(--alt-background);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+main {
+    min-height: 100%;
+    padding-bottom: 40px;
+}
+
+nav {
+    position: relative;
+    z-index: 10;
+    padding: 15px;
+    width: 100%;
+    background: var(--nav-color);
+    color: white;
+    font-size: 20px;
+}
+
+#navlinks {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navlinks a {
+    padding: 15px;
+    z-index: 15;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background: var(--nav-color);
+}
+
+
+/* PREFAB POSITIONING CLASSES */
+.top, .right, .bottom, .left, .center-y, .center-x, .center {
+    position: absolute
+}
+
+.top {
+    top: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.left {
+    left: 0;
+}
+
+.center-y {
+    transform: translateY(-50%);
+    bottom: 50%;
+}
+
+.center-x {
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.center {
+    transform: translate(-50%, -50%);
+    bottom: 50%;
+    left: 50%;
+}

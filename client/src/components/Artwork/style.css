@@ -1,0 +1,128 @@
+#description-box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: .15s;
+}
+
+.art-description {
+    width: 700px;
+    margin: 0 auto;
+}
+
+#toggle-description {
+    cursor:pointer;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    background: rgb(0,0,0, .80);
+    padding: 15px 25px;
+    z-index: 20;
+
+    transition: .15s;
+}
+
+#fullscreen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgb(45,45,45, .75);
+    z-index: 10;
+    text-align:center;
+    transition: .15s;
+}
+
+#fullscreen img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    transition: 5s;
+    z-index: -1;
+}
+
+#art-title, #description-box {
+    background: rgb(0,0,0, .80);
+    z-index: 15;
+    width: 100%;
+    padding: 15px;
+}
+
+#gallery {
+    
+    text-align:center;
+    -webkit-overflow-scrolling: touch;
+}
+
+.genre {
+    border-top: var(--highlight-color) dashed 2px;
+    margin-bottom: 15px;
+    padding-top: 6px;
+}
+
+.genre-name {
+    text-align:center;
+    padding-left: 15px;
+    /* font-style: italic; */
+}
+
+.genre hr {
+    border-top: none;
+    border-bottom: var(--highlight-color) dashed 2px ;
+    opacity: .5;
+}
+
+.thumbnail {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    border: var(--alt-background-half) solid 3px;
+    transition: .15s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+.thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+}
+.thumbnail p {
+    position: absolute;
+    bottom: -100%;
+    background: var(--layer0);
+    padding: 5px;
+    color: var(--text-color);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    z-index: 5;
+    width: 100%;
+    text-align:center;
+    transition: .15s;
+}
+
+.thumbnail:hover {
+    border: var(--highlight-color) solid 3px;
+}
+
+.thumbnail:hover p {
+    bottom: 0;
+}
+
+@media only screen and (max-width: 700px) {
+    .art-description {
+        width: 100%;
+    }
+}
