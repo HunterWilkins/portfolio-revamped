@@ -59,6 +59,7 @@ function Code(props) {
                     <div key = {"CodePage" + item.title + codeCards.indexOf(item) + ""}className = "card" style = {props.groovy ? {} : cleanstyle}>
                         <p className = "title">{item.title}</p>
                         <br></br>
+                        <hr />
                         <a href = {item.href} target = "blank">
                             <img className = "project-link" src = {item.img} alt = "Project"></img>
                         </a>

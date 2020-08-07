@@ -1,9 +1,5 @@
 #code {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    
     background: var(--layer0);
     text-align:center;
     overflow-y: auto;
@@ -12,19 +8,26 @@
 
 .card {
     position: relative;
-    background: var(--layer1);
+    background: var(--alt-background-half);
     text-align:center;
     vertical-align:top;
-
     margin: 5px;
-    padding: var(--padding);
+    padding: 10px;
     width: 200px;
     height: 250px;
     display: inline-block;
 }
 
+.card hr {
+    padding: 0;
+    height: 1em;
+    margin: 0;
+    border: none;
+    border-top: var(--alt-color) solid 2px;
+}
+
 .title {
-    font-size: 18px;
+    font-size: 16px;
     text-align:center;
     font-weight: bolder;
 }
@@ -35,8 +38,8 @@
     height: 90px;
     position: relative;
     padding: 5px;
-    background: var(--layer2);
-    border: var(--highlight) solid 2px;
+    background: var(--alt-background);
+    border: var(--highlight-color) solid 2px;
     border-radius: 50%;
     transition: .15s;
 }

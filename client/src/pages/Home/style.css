@@ -49,6 +49,10 @@ ul {
     list-style-position:inside;
 }
 
+html {
+    filter: hue-rotate(20deg);
+}
+
 /*PAGE - SPECIFIC*/
 body {
     position: relative;
@@ -88,6 +92,10 @@ nav {
 #navlinks a {
     padding: 15px;
     z-index: 15;
+}
+
+.active-tab {
+    font-weight: bolder;
 }
 
 footer {
